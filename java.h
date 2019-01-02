@@ -15,5 +15,7 @@ protected:
 public:
 	Java(std::string name, double price, double cost, int darkness);
 	void add_shot(Shot shot);
+	std::string shots_to_string (Shot sts);
+	std::string to_string() override;
 
 };
