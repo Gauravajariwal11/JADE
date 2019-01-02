@@ -8,11 +8,13 @@ all: main
 debug: CXXFLAGS += -g
 debug: default
 
-jade: product.o donut.o
-	${CXX} ${CXXFLAGS} -o jade product.o donut.o
+jade: product.o donut.o java.o
+	${CXX} ${CXXFLAGS} -o jade product.o donut.o java.o
 product.o: product.cpp *.h
 	${CXX} ${CXXFLAGS} -c product.cpp
 donut.o: donut.cpp *.h
 	${CXX} ${CXXFLAGS} -c donut.cpp
+java.o: java.cpp *.h
+	${CXX} ${CXXFLAGS} -c java.cpp
 clean:
 	-rm -f *.gch *.o a.out jade
