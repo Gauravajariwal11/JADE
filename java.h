@@ -1,11 +1,12 @@
 #pragma once
 #include "product.h"
 #include <iostream>
-#include <stream>
+#include <string>
+#include <vector>
 
 enum Shot{None, Chocolate, Vanilla, Peppermint, Hazelnut};
 
-class Java : public product {
+class Java : public Product {
 
 protected:
 	int _darkness;
