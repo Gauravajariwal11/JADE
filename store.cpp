@@ -1,4 +1,6 @@
 #include "store.h"
+#include <sstream>
+
 
 Store::Store(std::string store_name) : _name{store_name} { }
 std::string Store::name() {return _name;}
