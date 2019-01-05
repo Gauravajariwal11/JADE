@@ -18,4 +18,5 @@ public:
 	int number_of_products();
 	std::string product_to_string(int product);
 
+	friend std::ostream& operator<<(std::ostream& ost, Store& store); 
 };
