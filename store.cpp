@@ -10,7 +10,7 @@ std::string Store::product_to_string(int product) { std::cout<< _products[produc
 
 std::ostream& operator<<(std::ostream& ost, Store& store) {
 	ost << "Store " << store._name << std::endl << std::endl;
-	ost<< "Products: " << std::endl;
+	ost << "Products: " << std::endl;
 
 	for (auto p : store._products) {ost << " " << p->to_string() << std::endl;}
 		return ost;
