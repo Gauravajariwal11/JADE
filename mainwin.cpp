@@ -46,7 +46,7 @@ Mainwin::Mainwin() : _store{Store{"JADE"}} {
 	//All Products
 	//append all products to VIEW menu
 	Gtk::MenuItem *menuitem_all_products = Gtk::manage(new Gtk::MenuItem("_All Products", true));
-	menuitem_view->signal_activate().connect(sigc::mem_fun(*this, &Mainwin::on_view_all_click));
+	menuitem_all_products->signal_activate().connect(sigc::mem_fun(*this, &Mainwin::on_view_all_click));
 	viewmenu->append(*menuitem_all_products);
 
 	//CREATE
@@ -58,12 +58,12 @@ Mainwin::Mainwin() : _store{Store{"JADE"}} {
 
 	//append coffee to create menu
 	Gtk::MenuItem *menuitem_coffee = Gtk::manage(new Gtk::MenuItem("_Coffee", true));
-	menuitem_view->signal_activate().connect(sigc::mem_fun(*this, &Mainwin::on_create_coffee_click));
+	menuitem_coffee->signal_activate().connect(sigc::mem_fun(*this, &Mainwin::on_create_coffee_click));
 	createmenu->append(*menuitem_coffee);
 
 	//Append donut to create menu
 	Gtk::MenuItem *menuitem_donut = Gtk::manage(new Gtk::MenuItem("_Donut", true));
-	menuitem_view->signal_activate().connect(sigc::mem_fun(*this, &Mainwin::on_create_donut_click));
+	menuitem_donut->signal_activate().connect(sigc::mem_fun(*this, &Mainwin::on_create_donut_click));
 	createmenu->append(*menuitem_donut);
 
 	vbox->show_all();
