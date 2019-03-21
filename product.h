@@ -1,22 +1,15 @@
-#ifndef _PRODUCT_H
-#define _PRODUCT_H
-
-#include <iostream>
+#pragma once
 #include <string>
-
+#include <ostream>
 
 class Product {
-
-protected:
-	std::string _name;
-	double _price;
-	double _cost;
-
-public:
-	Product (std::string name, double price, double cost);
-	std::string name();
-	virtual std::string to_string();
-
+  public:
+    Product(std::string name, double price, double cost);
+    std::string name();
+    double profit() const;
+    virtual std::string to_string();
+  protected:
+    std::string _name;
+    double _price;
+    double _cost;
 };
-
-#endif
